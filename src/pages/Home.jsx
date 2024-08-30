@@ -1,47 +1,45 @@
 import React from "react";
-import InputBox from "../components/InputBox";
 import VideoBox from "../components/VideoBox";
+import Services from "../components/Services";
+import Product from "../components/Product";
+import shoes from "../data";
 
-function Home() {
+function Home({ service, product }) {
   return (
-    <div className="container mx-auto">
-      <div className="mt-32 grid justify-center">
-        <InputBox />
-        <br />
-        <div className="flex items-center justify-center">
-          <button className="btn btn-outline-dark w-40">Get Started</button>
+    <div>
+      <div className="container mx-auto">
+        <div id={service} className="section1">
+          <div className="mt-32 grid justify-center">
+            <input
+              className="form-control me-2 w-80"
+              type="text"
+              placeholder="Enter Email"
+              aria-label="Search"
+            />
+            <br />
+            <div className="flex items-center justify-center">
+              <button className="btn btn-outline-dark w-40">Get Started</button>
+            </div>
+          </div>
+          <div className="mx-20 mt-20 mb-10">
+            <Services />
+          </div>
+          <div className="flex justify-center items-center container">
+            <VideoBox />
+          </div>
         </div>
-      </div>
-
-      <div className="w-[80%] mx-auto mt-16 space-y-8">
-        <div>
-          <h1 className="text-2xl font-bold mb-2">Premium Material</h1>
-          <p className="text-lg">
-            For a company that generates thousands of mass-produced sneakers,
-            Nike’s quality is relatively good. Different releases have differing
-            levels of quality which is not always reflected in their pricing
-            structure.
-          </p>
+        <div className="flex justify-center section2" id={product}>
+          <div className="inline-grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-10 my-20">
+            {shoes.map((element) => (
+              <Product
+                key={element.id}
+                imageSrc={element.imageSrc}
+                name={element.name}
+                price={element.price}
+              />
+            ))}
+          </div>
         </div>
-        <div>
-          <h1 className="text-2xl font-bold mb-2">Fast Shipping</h1>
-          <p className="text-lg">
-            We make sure you receive your Nike product as soon as we have
-            finished making it. We also provide free returns if you are not
-            satisfied.
-          </p>
-        </div>
-        <div>
-          <h1 className="text-2xl font-bold mb-2">Quality Assurance</h1>
-          <p className="text-lg">
-            For every purchase you make, we will ensure there are no damages or
-            faults, and we will check and test the pitch of your product.
-          </p>
-        </div>
-      </div>
-
-      <div className="flex justify-center items-center container">
-        <VideoBox />
       </div>
     </div>
   );
