@@ -5,10 +5,10 @@ import HighQualityIcon from "@mui/icons-material/HighQuality";
 
 function Services() {
   return (
-    <div className="w-[80%] mx-auto mt-16 space-y-8">
-      <div className="flex">
+    <div className="w-[90%] lg:w-[80%] mx-auto mt-16 space-y-8">
+      <div className="flex flex-col md:flex-row items-center md:items-start">
         <WorkspacePremiumIcon sx={{ fontSize: 50, margin: 2 }} />
-        <div>
+        <div className="lg:text-left  md:ml-4 sm:text-center">
           <h1 className="text-2xl font-bold mb-2">Premium Material</h1>
           <p className="text-lg">
             For a company that generates thousands of mass-produced sneakers,
@@ -18,9 +18,9 @@ function Services() {
           </p>
         </div>
       </div>
-      <div className="flex">
+      <div className="flex flex-col md:flex-row items-center md:items-start">
         <LocalShippingIcon sx={{ fontSize: 50, margin: 2 }} />
-        <div>
+        <div className="sm:text-center lg:text-left  md:ml-4">
           <h1 className="text-2xl font-bold mb-2">Fast Shipping</h1>
           <p className="text-lg">
             We make sure you receive your Nike product as soon as we have
@@ -29,9 +29,9 @@ function Services() {
           </p>
         </div>
       </div>
-      <div className="flex">
+      <div className="flex flex-col md:flex-row items-center md:items-start">
         <HighQualityIcon sx={{ fontSize: 50, margin: 2 }} />
-        <div>
+        <div className="sm:text-center lg:text-left  md:ml-4">
           <h1 className="text-2xl font-bold mb-2">Quality Assurance</h1>
           <p className="text-lg">
             For every purchase you make, we will ensure there are no damages or

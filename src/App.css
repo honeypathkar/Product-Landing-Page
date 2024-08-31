@@ -1,0 +1,29 @@
+.logoName {
+  font-family: "Amatic SC", sans-serif;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+footer {
+  margin-top: 30px;
+  background-color: #d1d5db;
+  padding: 20px;
+}
+
+footer > ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer > ul > li {
+  padding: 0 10px;
+}
+
+footer > span {
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9em;
+  color: #444;
+}
